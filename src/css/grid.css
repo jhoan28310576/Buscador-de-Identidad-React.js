@@ -1,28 +1,53 @@
+
+
+
 .grid {
  background-color:rgb(255, 255, 255) ;
 }
 
-.imagen-grid {
-    width: auto;
-    height: auto;
+.grid2 {
+    background-color:rgb(191, 66, 66) ;
 }
+
+.imagen-grid {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 50;
+    transform: scale(0.95);
+    width: 191px;
+    height: 191px;
+}
+
+.imagen-grid.aparecer {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.imagen-grid.desvanecer {
+    opacity: 2;
+    transform: scale(0.95);
+}
+
 
 .contenedor-segundaro {
-    background-color: rgb(236, 231, 231);
+    background-color: rgba(13, 44, 130, 0.897);
+    border-radius: 10px;
 }
-
 .contenedor-segundaro2 {
-    background-color: rgb(255, 255, 255);
-    width: auto;
-    height: auto;
+    background-color: rgba(129, 173, 244, 0.678);
+    margin: auto;
+    width: 95%;
+    
 }
-.contenedor-filtro {
-    background-color: rgb(235, 232, 232);
-    width: auto;
-    height: auto;
+.contenedor-segundaro3 {
+    background-color: rgba(251, 251, 251, 0.951);
+    
 }
 
-.grid2 {
-    background-color:rgb(255, 255, 255) ;
-   }
+.contendor {
+    background-color: rgba(61, 95, 220, 0.406);
+    
+}
+
+
+
 
