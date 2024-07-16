@@ -1,0 +1,28 @@
+.grid {
+ background-color:rgb(255, 255, 255) ;
+}
+
+.imagen-grid {
+    width: auto;
+    height: auto;
+}
+
+.contenedor-segundaro {
+    background-color: rgb(236, 231, 231);
+}
+
+.contenedor-segundaro2 {
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    height: auto;
+}
+.contenedor-filtro {
+    background-color: rgb(235, 232, 232);
+    width: auto;
+    height: auto;
+}
+
+.grid2 {
+    background-color:rgb(255, 255, 255) ;
+   }
+
