@@ -1,6 +1,4 @@
 
-
-
 .grid {
  background-color:rgb(255, 255, 255) ;
 }
@@ -36,13 +34,15 @@
     background-color: rgba(129, 173, 244, 0.678);
     margin: auto;
     width: 95%;
-    
 }
 .contenedor-segundaro3 {
     background-color: rgba(251, 251, 251, 0.951);
-    
 }
 
+.contenedor-segundaro4 {
+    background-color: rgba(251, 251, 251, 0.951);
+    
+}
 .contendor {
     background-color: rgba(61, 95, 220, 0.406);
     

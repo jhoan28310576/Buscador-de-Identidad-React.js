@@ -106,7 +106,7 @@ function Grid(props) {
                         )}
                     </Row>
                 </div>
-            <div className="contenedor-segundaro3">
+            <div className="contenedor-segundaro4">
                 {filteredPersonas.length > 0 && <PersonasTabla personas={filteredPersonas} />}
             </div>       
                 <div className="contenedor-segundaro3" >
