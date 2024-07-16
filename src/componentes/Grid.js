@@ -10,13 +10,19 @@ import PersonasTabla from "./TablaPersonas";
 function Grid(props) {
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredPersonas, setFilteredPersonas] = useState([]);
+    const [showAlert, setShowAlert] = useState(false);
 
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value)
+        setShowAlert(false)
     };
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();
+        if (!searchTerm.trim()) {
+            setShowAlert(true);
+            return;
+        }
         const filtered = props.personas.filter(persona =>
             persona.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
             persona.apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -37,7 +43,7 @@ function Grid(props) {
         setTimeout (() => {
             setSearchTerm("");
             setFilteredPersonas([]);
-        }, 300); 
+        }, 800); 
     };
 
     useEffect(() => {
@@ -52,8 +58,8 @@ function Grid(props) {
             <div className="contenedor-segundaro">
                 <Navbar className="bg-body-tertiary justify-content-center contenedor-navbar">
                     <Form inline onSubmit={handleSearchSubmit}>
-                        
                         <Row className="justify-content-center align-items-center">
+                            
                         <h2 className="text-center">Buscar a</h2>
                             <Col xs="auto">
                                 <Form.Control
@@ -76,7 +82,11 @@ function Grid(props) {
             
                 <div className="contenedor-segundaro2 bg-body-tertiary">
                     <Row className="justify-content-center align-items-center contendor ">
-                        {filteredPersonas.length > 0 ? (
+                        {showAlert ? ( 
+                            <div>
+                                <p className="text-center">Por favor colocar un nombre valido</p>
+                            </div>
+                        ) : filteredPersonas.length > 0 ? (
                             filteredPersonas.map((persona, index) => (
                                 <Col key={index} className="grid">
                                     <img
