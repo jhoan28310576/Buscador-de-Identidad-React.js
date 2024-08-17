@@ -1,4 +1,4 @@
-
+This project is a search with the filter method where people, role or profession of a data.json
 
 ## Available Scripts
 
